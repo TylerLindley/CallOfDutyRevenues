@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="GameTableController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameTableController">
+   <children>
+      <VBox fx:id="vBox" layoutX="29.0" layoutY="14.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label id="header" fx:id="titleLabel" prefHeight="51.0" prefWidth="432.0" stylesheets="@stylesheet.css" text="List of Call of Duty Games" />
+            <TableView fx:id="tableView" prefHeight="325.0" prefWidth="640.0">
+               <columns>
+                  <TableColumn fx:id="iDColumn" prefWidth="32.0" text="ID" />
+                  <TableColumn fx:id="titleColumn" minWidth="0.0" prefWidth="178.0" text="Title" />
+                  <TableColumn fx:id="publisherColumn" minWidth="2.0" prefWidth="86.0" text="Publisher" />
+                  <TableColumn fx:id="releaseDateColumn" minWidth="0.0" prefWidth="184.0" text="Release Date" />
+                  <TableColumn fx:id="grossRevenueColumn" minWidth="0.0" prefWidth="128.0" text="Total Revenue" />
+                  <TableColumn fx:id="ratingColumn" prefWidth="51.0" text="Rating" />
+               </columns>
+            </TableView>
+            <Button fx:id="graphViewButton" mnemonicParsing="false" onAction="#viewBarGraph" text="Graph View" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
 </AnchorPane>

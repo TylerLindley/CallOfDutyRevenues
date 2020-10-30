@@ -17,15 +17,15 @@ public class Main extends Application {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-               //launch(args); commenting test.
+               launch(args);
     }
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("gameeTableView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("revenueBarGraphView.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Revenues");
+        stage.setTitle("Video Game Sales");
         stage.show();
     }
 }
