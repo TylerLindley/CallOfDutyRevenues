@@ -8,7 +8,7 @@
       <VBox fx:id="vBox" layoutX="29.0" layoutY="14.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label id="header" fx:id="titleLabel" prefHeight="51.0" prefWidth="432.0" stylesheets="@stylesheet.css" text="List of Call of Duty Games" />
-            <TableView fx:id="tableView" prefHeight="325.0" prefWidth="640.0">
+            <TableView fx:id="tableView" prefHeight="406.0" prefWidth="660.0">
                <columns>
                   <TableColumn fx:id="iDColumn" prefWidth="32.0" text="ID" />
                   <TableColumn fx:id="titleColumn" minWidth="0.0" prefWidth="178.0" text="Title" />

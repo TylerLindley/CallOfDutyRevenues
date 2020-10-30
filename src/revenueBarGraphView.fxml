@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.*?>
 <AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RevenueBarGraphController">
    <children>
-      <Label id="header" layoutX="51.0" layoutY="14.0" stylesheets="@stylesheet.css" text="BAR GRAPH UNDERNEATH" />
-      <Button fx:id="tableViewButton" layoutX="602.0" layoutY="457.0" mnemonicParsing="false" onAction="#viewAllGames" text="Table View" />
-      <BarChart layoutX="36.0" layoutY="57.0">
-        <xAxis>
-          <CategoryAxis side="BOTTOM" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis side="LEFT" />
-        </yAxis>
-      </BarChart>
+      <VBox layoutX="36.0" layoutY="14.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label id="header" stylesheets="@stylesheet.css" text="BAR GRAPH UNDERNEATH" />
+            <BarChart fx:id="barChart" prefHeight="422.0" prefWidth="700.0">
+              <xAxis>
+                <CategoryAxis fx:id="gameAxis" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="grossRevenueAxis" side="LEFT" />
+              </yAxis>
+            </BarChart>
+            <Button fx:id="tableViewButton" mnemonicParsing="false" onAction="#viewAllGames" text="Table View" />
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
    </children>
 </AnchorPane>

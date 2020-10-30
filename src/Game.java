@@ -9,7 +9,6 @@ public class Game {
     private double grossRevenue;
     private int rating;
 
-
     /**
      * This constructor should be used for an existing game already defined in the DB
      * @param title
