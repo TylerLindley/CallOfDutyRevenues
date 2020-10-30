@@ -5,10 +5,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
@@ -50,7 +52,17 @@ public class GameTableController implements Initializable {
     }
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
+    public void initialize(URL location, ResourceBundle resourceBundle) {
+        iDColumn.setCellValueFactory(new PropertyValueFactory<Game, Integer>("gameID"));
+        titleColumn.setCellValueFactory(new PropertyValueFactory<Game, String>("title"));
+        publisherColumn.setCellValueFactory(new PropertyValueFactory<Game, String>("publisher"));
+        releaseDateColumn.setCellValueFactory(new PropertyValueFactory<Game, LocalDate>("releaseDate"));
+        grossRevenueColumn.setCellValueFactory(new PropertyValueFactory<Game, Double>("grossRevenue"));
+        ratingColumn.setCellValueFactory(new PropertyValueFactory<Game, Integer>("rating"));
+        try {
+            tableView.getItems().addAll(DBUtility.getAllGamesFromDB());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
     }
 }
