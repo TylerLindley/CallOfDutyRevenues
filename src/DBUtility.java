@@ -7,10 +7,10 @@ public class DBUtility {
     private static String password = "Jesus2013!";
 
     /**
-     * This method will write a new patient into the DB and return
-     * the patientID
+     * This method will write a new game into the DB and return
+     * the gameID
      * @param newGame
-     * @return patientID (primary key from the DB)
+     * @return gameID (primary key from the DB)
      */
     public static int insertNewGame(Game newGame) throws SQLException {
         //1.define connection, prepared statement
@@ -40,7 +40,7 @@ public class DBUtility {
             //5. execute the insert
             ps.executeUpdate();
 
-            //6. get the patientID returned
+            //6. get the gameID returned
             rs = ps.getGeneratedKeys();
 
             while(rs.next())
@@ -63,7 +63,7 @@ public class DBUtility {
     }
 
     /**
-     * This method will return ALL patients in the database
+     * This method will return ALL games in the database
      */
     public static ArrayList<Game>
     getAllGamesFromDB() throws SQLException {
