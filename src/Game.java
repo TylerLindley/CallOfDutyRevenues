@@ -11,10 +11,10 @@ public class Game {
 
     /**
      * This constructor should be used for an existing game already defined in the DB
-     * @param title
-     * @param publisher
-     * @param grossRevenue
-     * @param releaseDate
+     * @param title (name)
+     * @param publisher (company name)
+     * @param grossRevenue (total money made)
+     * @param releaseDate (the date the game was released)
      */
     public Game(String title, String publisher, LocalDate releaseDate, double grossRevenue, int rating) throws SQLException {
         setTitle(title);
@@ -28,11 +28,12 @@ public class Game {
     /**
      * This constructor will automatically add a valid game to the
      * database
-     * @param title
-     * @param publisher
-     * @param releaseDate
-     * @param rating
-     * @throws SQLException
+     * @param title (name)
+     * @param publisher (company name)
+     * @param grossRevenue (total money made)
+     * @param releaseDate (the date the game was released)
+     * @param rating (Average rating)
+     * @throws SQLException (In case of SQL Error)
      */
     public Game(int gameID, String title, String publisher, LocalDate releaseDate, double grossRevenue, int rating) {
         setGameID(gameID);

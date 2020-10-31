@@ -11,7 +11,7 @@
    <children>
       <VBox layoutX="36.0" layoutY="14.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label id="header" stylesheets="@stylesheet.css" text="BAR GRAPH UNDERNEATH" />
+            <Label id="header" alignment="CENTER" prefHeight="51.0" prefWidth="689.0" stylesheets="@stylesheet.css" text="Call of Duty Franchise Total Revenues" />
             <BarChart fx:id="barChart" prefHeight="422.0" prefWidth="700.0">
               <xAxis>
                 <CategoryAxis fx:id="gameAxis" side="BOTTOM" />
@@ -20,7 +20,19 @@
                 <NumberAxis fx:id="grossRevenueAxis" side="LEFT" />
               </yAxis>
             </BarChart>
-            <Button fx:id="tableViewButton" mnemonicParsing="false" onAction="#viewAllGames" text="Table View" />
+            <HBox>
+               <children>
+                  <Button fx:id="pieChartButton" mnemonicParsing="false" onAction="#viewPieChart" text="View as Pie Chart" />
+                  <Button fx:id="tableViewButton" mnemonicParsing="false" onAction="#viewAllGames" text="Table View">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

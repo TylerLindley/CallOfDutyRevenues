@@ -18,7 +18,16 @@
                   <TableColumn fx:id="ratingColumn" minWidth="8.0" prefWidth="51.0" text="Rating" />
                </columns>
             </TableView>
-            <Button fx:id="graphViewButton" mnemonicParsing="false" onAction="#viewBarGraph" text="Graph View" />
+            <HBox>
+               <children>
+                  <Button fx:id="graphViewButton" mnemonicParsing="false" onAction="#viewBarGraph" text="View as Bar Graph" />
+                  <Button fx:id="pieChartButton" mnemonicParsing="false" onAction="#viewPieChart" text="View as Pie Chart">
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
          </children>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

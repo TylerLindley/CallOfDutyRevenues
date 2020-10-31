@@ -47,8 +47,16 @@ public class GameTableController implements Initializable {
     private Button graphViewButton;
 
     @FXML
+    private Button pieChartButton;
+
+    @FXML
     private void viewBarGraph(ActionEvent event) throws IOException {
         SceneChanger.changeScene(event, "revenueBarGraphView.fxml", "Video Game Sales");
+    }
+
+    @FXML
+    private void viewPieChart(ActionEvent event) throws IOException {
+        SceneChanger.changeScene(event, "revenuePieChartView.fxml", "Video Game Sales");
     }
 
     @Override
