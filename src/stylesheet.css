@@ -1,9 +1,14 @@
 .root
 {
     -fx-font-size: 12 px;
+    -fx-background-color: lightblue;
 }
 
 #header
 {
     -fx-font-size: 35px;
 }
+
+.button {
+     -fx-background-color: white;
+ }

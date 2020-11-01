@@ -7,9 +7,9 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>
-<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RevenueBarGraphController">
+<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RevenueBarGraphController">
    <children>
-      <VBox layoutX="36.0" layoutY="14.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox layoutX="36.0" layoutY="14.0" prefHeight="500.0" prefWidth="700.0" stylesheets="@stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <Label id="header" alignment="CENTER" prefHeight="51.0" prefWidth="689.0" stylesheets="@stylesheet.css" text="Call of Duty Franchise Total Revenues" />
             <BarChart fx:id="barChart" prefHeight="422.0" prefWidth="700.0">
@@ -22,7 +22,7 @@
             </BarChart>
             <HBox>
                <children>
-                  <Button fx:id="pieChartButton" mnemonicParsing="false" onAction="#viewPieChart" text="View as Pie Chart" />
+                  <Button id="button" fx:id="pieChartButton" mnemonicParsing="false" onAction="#viewPieChart" text="View as Pie Chart" />
                   <Button fx:id="tableViewButton" mnemonicParsing="false" onAction="#viewAllGames" text="Table View">
                      <opaqueInsets>
                         <Insets />
