@@ -38,7 +38,7 @@ public class GameTableController implements Initializable {
     private TableColumn<Game, LocalDate> releaseDateColumn;
 
     @FXML
-    private TableColumn<Game, Double> grossRevenueColumn;
+    private TableColumn<Game, Long> grossRevenueColumn;
 
     @FXML
     private TableColumn<Game, Integer> ratingColumn;
@@ -65,7 +65,7 @@ public class GameTableController implements Initializable {
         titleColumn.setCellValueFactory(new PropertyValueFactory<Game, String>("title"));
         publisherColumn.setCellValueFactory(new PropertyValueFactory<Game, String>("publisher"));
         releaseDateColumn.setCellValueFactory(new PropertyValueFactory<Game, LocalDate>("releaseDate"));
-        grossRevenueColumn.setCellValueFactory(new PropertyValueFactory<Game, Double>("grossRevenue"));
+        grossRevenueColumn.setCellValueFactory(new PropertyValueFactory<Game, Long>("grossRevenue"));
         ratingColumn.setCellValueFactory(new PropertyValueFactory<Game, Integer>("rating"));
         try {
             tableView.getItems().addAll(DBUtility.getAllGamesFromDB());

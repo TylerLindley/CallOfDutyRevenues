@@ -57,7 +57,7 @@ public class RevenueBarGraphController implements Initializable {
         grossRevenueSeries.getData().add(new XYChart.Data("Ghosts", 1080000000.00));
         grossRevenueSeries.getData().add(new XYChart.Data("Advanced Warfare", 840000000.00));
         grossRevenueSeries.getData().add(new XYChart.Data("Black Ops 3", 1336000000.00));
-        grossRevenueSeries.getData().add(new XYChart.Data("Infinte Warfare", 1000000000.00));
+        grossRevenueSeries.getData().add(new XYChart.Data("Infinite Warfare", 1000000000.00));
         grossRevenueSeries.getData().add(new XYChart.Data("WW2", 804000000.00));
         grossRevenueSeries.getData().add(new XYChart.Data("Black Ops 4", 1300000000.00));
         grossRevenueSeries.getData().add(new XYChart.Data("Modern Warfare", 1620000000.00));

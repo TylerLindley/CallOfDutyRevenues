@@ -28,7 +28,7 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.getIcons().add(callOfDutyLogo);
-        stage.setTitle("Video Game Sales");
+        stage.setTitle("Call of Duty Revenues");
         stage.show();
     }
 }

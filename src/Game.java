@@ -6,7 +6,7 @@ public class Game {
     private int gameID;
     private String title, publisher;
     private LocalDate releaseDate;
-    private double grossRevenue;
+    private long grossRevenue;
     private int rating;
 
     /**
@@ -16,7 +16,7 @@ public class Game {
      * @param grossRevenue (total money made)
      * @param releaseDate (the date the game was released)
      */
-    public Game(String title, String publisher, LocalDate releaseDate, double grossRevenue, int rating) throws SQLException {
+    public Game(String title, String publisher, LocalDate releaseDate, long grossRevenue, int rating) throws SQLException {
         setTitle(title);
         setPublisher(publisher);
         setReleaseDate(releaseDate);
@@ -35,7 +35,7 @@ public class Game {
      * @param rating (Average rating)
      * @throws SQLException (In case of SQL Error)
      */
-    public Game(int gameID, String title, String publisher, LocalDate releaseDate, double grossRevenue, int rating) {
+    public Game(int gameID, String title, String publisher, LocalDate releaseDate, long grossRevenue, int rating) {
         setGameID(gameID);
         setTitle(title);
         setPublisher(publisher);
@@ -49,7 +49,12 @@ public class Game {
     }
 
     public void setGameID(int gameID) {
-        this.gameID = gameID;
+        if(gameID >0) {
+            this.gameID = gameID;
+        }
+        else {
+            throw new IllegalArgumentException("GameID is incorrect, must be a number and greater than 0.");
+        }
     }
 
     public String getTitle() {
@@ -57,22 +62,21 @@ public class Game {
     }
 
     public void setTitle(String title) {
-      //  if (title.matches("[A-Z][a-zA-Z]*[-]?[A-z]*?"))
+      if (title.contains("Call of Duty"))
             this.title = title;
-       // else
-         //   throw new IllegalArgumentException("First name must start with a capital and have more than 1 letter");
+       else
+         throw new IllegalArgumentException("Not a valid Call of Duty game.");
     }
-    //testing
 
     public String getPublisher() {
         return publisher;
     }
 
     public void setPublisher(String publisher) {
-       // if (publisher.matches("[A-Z][a-zA-Z]*[-]?[A-z]*?"))
+       if (publisher.equalsIgnoreCase("Infinity Ward") || publisher.equalsIgnoreCase("Sledgehammer Games") || publisher.equalsIgnoreCase("Treyarch"))
             this.publisher = publisher;
-        //else
-          //  throw new IllegalArgumentException("Last name must start with a capital and have more than 1 letter");
+       else
+            throw new IllegalArgumentException("Not a valid Call of Duty publisher! Please choose from: Infinity Ward, Sledgehammer Games or Treyarch.");
 
     }
 
@@ -87,18 +91,28 @@ public class Game {
             throw new IllegalArgumentException("releaseDate for a new game cannot be over 250 years ago");
         this.releaseDate = releaseDate;
     }
-    public double getGrossRevenue() {
+    public long getGrossRevenue() {
         return grossRevenue;
     }
 
-    public void setGrossRevenue(double grossRevenue) {
-        this.grossRevenue = grossRevenue;
+    public void setGrossRevenue(long grossRevenue) {
+        if(grossRevenue >=0) {
+            this.grossRevenue = grossRevenue;
+        }
+        else {
+            throw new IllegalArgumentException("Revenue must be greater than or equal to 0.");
+        }
     }
     public int getRating() {
         return rating;
     }
     public void setRating(int rating) {
-        this.rating = rating;
+        if(rating >=0) {
+            this.rating = rating;
+        }
+        else {
+            throw new IllegalArgumentException("Rating cannot be lower than 0! (even though sometimes we want it to be!)");
+        }
     }
     public String toString()
     {

@@ -33,7 +33,7 @@ public class DBUtility {
             ps.setString(1, newGame.getTitle());
             ps.setString(2, newGame.getPublisher());
             ps.setDate(3, Date.valueOf(newGame.getReleaseDate()));
-            ps.setDouble(4, newGame.getGrossRevenue());
+            ps.setLong(4, newGame.getGrossRevenue());
             ps.setInt(5, newGame.getRating());
 
 
@@ -92,8 +92,8 @@ public class DBUtility {
                             resultSet.getInt("gameID"),
                             resultSet.getString("title"),
                             resultSet.getString("publisher"),
-                             resultSet.getDate("releaseDate").toLocalDate(),
-                            resultSet.getDouble("grossRevenue"),
+                            resultSet.getDate("releaseDate").toLocalDate(),
+                            resultSet.getLong("grossRevenue"),
                             resultSet.getInt("rating")
                 );
                 games.add(newGame);

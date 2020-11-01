@@ -7,8 +7,42 @@
 #header
 {
     -fx-font-size: 35px;
+    -fx-font-weight: bold;
 }
 
 .button {
      -fx-background-color: white;
  }
+
+#gameAxis, #grossRevenueAxis {
+    -fx-font-weight: bold;
+}
+
+#pieChartHeader {
+    -fx-font-size: 29 px;
+    -fx-font-weight: bold;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: black;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: black;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+#infinityWardCopiesSold {
+    -fx-background-color: orangered;
+}
+
+#treyarchCopiesSold {
+    -fx-background-color: orange;
+}
+
+#shgCopiesSold {
+    -fx-background-color: lightgreen;
+}

@@ -8,7 +8,7 @@
    <children>
       <VBox prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label prefHeight="65.0" prefWidth="651.0" stylesheets="@stylesheet.css" text="Call of Duty Franchise Copies Sold by Publisher" wrapText="true">
+            <Label id="pieChartHeader" prefHeight="65.0" prefWidth="651.0" stylesheets="@stylesheet.css" text="Call of Duty Franchise Copies Sold by Publisher" wrapText="true">
                <font>
                   <Font size="31.0" />
                </font>
@@ -23,9 +23,9 @@
                         <Insets bottom="50.0" />
                      </HBox.margin>
                   </Pane>
-                  <VBox prefHeight="317.0" prefWidth="354.0">
+                  <VBox prefHeight="352.0" prefWidth="269.0">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="270.0" text="Infinity Ward Copies Sold: 151,268,840">
+                        <Label id="infinityWardCopiesSold" prefHeight="17.0" prefWidth="270.0" text="Infinity Ward Copies Sold: 151,268,840">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
@@ -33,7 +33,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="17.0" prefWidth="244.0" text="Treyarch Copies Sold: 113,200,000">
+                        <Label id="treyarchCopiesSold" prefHeight="17.0" prefWidth="244.0" text="Treyarch Copies Sold: 113,200,000">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
@@ -41,7 +41,7 @@
                               <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
-                        <Label prefHeight="17.0" prefWidth="273.0" text="Sledgehammer Games Copies Sold: 32,880,000">
+                        <Label id="shgCopiesSold" prefHeight="17.0" prefWidth="378.0" text="Sledgehammer Copies Sold: 32,880,000">
                            <VBox.margin>
                               <Insets top="10.0" />
                            </VBox.margin>
@@ -50,6 +50,12 @@
                            </font>
                         </Label>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="40.0" />
+                     </HBox.margin>
                   </VBox>
                </children>
             </HBox>
